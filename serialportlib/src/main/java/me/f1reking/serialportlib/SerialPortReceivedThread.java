@@ -50,12 +50,6 @@ public abstract class SerialPortReceivedThread extends Thread {
                 byte[] receivedBytes = new byte[size];
                 System.arraycopy(mReceivedBuffer, 0, receivedBytes, 0, size);
                 onDataReceived(receivedBytes);
-
-                if (isInterrupted()) {
-                    return;
-                }
-                
-                Thread.sleep(1000);
             } catch (IOException | InterruptedException e) {
                e.printStackTrace();
             }
