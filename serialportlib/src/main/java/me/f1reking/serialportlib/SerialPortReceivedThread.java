@@ -55,7 +55,7 @@ public abstract class SerialPortReceivedThread extends Thread {
                     return;
                 }
                 
-                Thread.sleep(500);
+                Thread.sleep(1000);
             } catch (IOException | InterruptedException e) {
                e.printStackTrace();
             }
